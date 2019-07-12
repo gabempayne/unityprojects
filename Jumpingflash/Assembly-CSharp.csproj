@@ -53,8 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FPS All-In-One\DemoScene\MiscScripts\Doors.cs" />
+     <Compile Include="Assets\FPS All-In-One\FirstPersonAIO\FirstPersonAIO.cs" />
      <Compile Include="Assets\Scripts\PlayerLook.cs" />
+     <Compile Include="Assets\Scripts\PlayerMotor.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
+     <None Include="Assets\FPS All-In-One\DemoScene\Working Materials\GlassBumpedDistort.shader" />
+     <None Include="Assets\FPS All-In-One\README.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/gabri/Documents/GitHub/unityprojects/Jumpingflash/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
