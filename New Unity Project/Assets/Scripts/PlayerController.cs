@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
 
     public Camera cameraView;
 
+    public GameObject bulletImpact;
+    public int currentAmmo;
+
 
     void Update() {
 
@@ -35,16 +38,17 @@ public class PlayerController : MonoBehaviour
         cameraView.transform.localRotation = Quaternion.Euler(cameraView.transform.localRotation.eulerAngles + new Vector3(0f, mouseInput.y));
 
         // Shooting
-        if(Input.GetMouseButton(0)) {
-            Ray ray = cameraView.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit)) {
-                Debug.Log("I'm looking at " + hit.transform.name);
-            } else {
-                Debug.Log("I'm looking at nothing");
-            }
+        if(Input.GetMouseButtonDown(0)) {
+            if(currentAmmo > 0) {
+                Ray ray = cameraView.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit)) {
+                    Instantiate(bulletImpact, hit.point, transform.rotation);
+                } else {
+                    Debug.Log("I'm looking at nothing");
+                }
+                currentAmmo--;
+            }            
         }
-
     }
-
 }
