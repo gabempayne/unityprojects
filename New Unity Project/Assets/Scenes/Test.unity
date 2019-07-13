@@ -1249,6 +1249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176136631}
   - component: {fileID: 176136630}
+  - component: {fileID: 176136632}
   m_Layer: 0
   m_Name: Ammo Pickup
   m_TagString: Untagged
@@ -1287,6 +1288,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &176136632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176136629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da773babfcfd0654fbd42377dd0f9b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoAmount: 25
 --- !u!1 &189080402
 GameObject:
   m_ObjectHideFlags: 0
@@ -7274,8 +7288,9 @@ GameObject:
   - component: {fileID: 1427018409}
   - component: {fileID: 1427018411}
   - component: {fileID: 1427018410}
+  - component: {fileID: 1427018412}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Gun HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7339,6 +7354,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427018408}
   m_CullTransparentMesh: 0
+--- !u!95 &1427018412
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427018408}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18be6c7f9c09fe3439ddc2230000e190, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1428565748
 GameObject:
   m_ObjectHideFlags: 0
@@ -8001,7 +8035,7 @@ GameObject:
   - component: {fileID: 1463610606}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8046,6 +8080,7 @@ MonoBehaviour:
   bulletImpact: {fileID: 6175491360782586907, guid: b9f88779a98abaf468a4993c3d911fef,
     type: 3}
   currentAmmo: 10
+  gunAnim: {fileID: 1427018412}
 --- !u!4 &1463610605
 Transform:
   m_ObjectHideFlags: 0

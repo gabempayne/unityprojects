@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletImpact;
     public int currentAmmo;
 
+    public Animator gunAnim;
+
     void Awake() {
         instance = this;
     }
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("I'm looking at nothing");
                 }
                 currentAmmo--;
+                gunAnim.SetTrigger("Shoot");
             }            
         }
     }
