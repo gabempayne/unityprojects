@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public static PlayerController instance;
+
     public Rigidbody2D rb;
 
     public float moveSpeed = 5f;
@@ -17,6 +20,10 @@ public class PlayerController : MonoBehaviour
 
     public GameObject bulletImpact;
     public int currentAmmo;
+
+    void Awake() {
+        instance = this;
+    }
 
 
     void Update() {
