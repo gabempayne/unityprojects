@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\AmmoPickup.cs" />
      <Compile Include="Assets\Scripts\Billboard.cs" />
      <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/gabri/Documents/GitHub/unityprojects/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
